@@ -1,0 +1,23 @@
+{
+  "name": "twitter-cfp-bot",
+  "version": "1.0.0",
+  "description": "A Twitter bot that watches for CFP announcements from conferences and re-broadcasts to followers, forming a centralized place for speakers to go when looking for conference speaking opportunities.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node bot.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/excellalabs/twitter-cfp-bot.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/excellalabs/twitter-cfp-bot/issues"
+  },
+  "homepage": "https://github.com/excellalabs/twitter-cfp-bot#readme",
+  "dependencies": {
+    "@types/node": "^12.11.1",
+    "twit": "^2.2.11"
+  }
+}
