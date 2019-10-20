@@ -3,6 +3,7 @@ var config = require('./config.ts')
 var Twitter = new twit(config)
 
 var retweet = function() {
+  console.log('retweet')
   var params = {
     q: '#nodejs, #Nodejs',
     result_type: 'recent',
@@ -10,4 +11,12 @@ var retweet = function() {
   }
 }
 
-setInterval(retweet, 50000)
+var tweet = function(text) {
+  Twitter.post('statuses/update', { status: text }, function(err, data, response) {
+    if (err) {
+      console.log('There was a problem tweeting the message.', err)
+    }
+  })
+}
+
+tweet('Im posting a tweet from a bot!')
