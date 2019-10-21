@@ -22,7 +22,7 @@ var searchTweets = function() {
     },
     function(err, data, response) {
       data.statuses.forEach(status => {
-        console.log('[' + status.user.name + '] - ' + status.text + ' **' + status.id + '**')
+        console.log('[' + status.user.name + '] - ' + status.text + ' **' + status.id_str + '**')
       })
     }
   )
@@ -38,5 +38,12 @@ var getTimelineTweets = function() {
   )
 }
 
+var retweet = function(id) {
+  Twitter.post('statuses/retweet', { id: id }, function(err, data, response) {
+    console.log(data)
+  })
+}
+
 // tweet('Im posting a tweet from a bot!')
-searchTweets()
+// searchTweets()
+retweet('1185948452863107072')
